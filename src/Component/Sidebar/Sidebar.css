@@ -1,0 +1,65 @@
+/* .sidebar {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  background: #fff;
+  max-height: calc(100% -70px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+} */
+
+.sidebar ul {
+  margin-bottom: 0px;
+  padding: 10px 15px;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+.sidebar ul li button {
+  color: rgba(0, 0, 0, 0.7) !important;
+  text-align: left;
+  justify-content: left;
+  border-radius: 10px !important;
+  padding: 12px 15px !important;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar ul li button:hover {
+  background: #f1f1f1 !important;
+}
+.sidebar ul li button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.sidebar ul li button * {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+.sidebar ul li button .icon svg {
+  font-size: 20px;
+}
+
+.sidebar ul li button .arrow {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar ul li button .arrow svg {
+  color: #000;
+  opacity: 0.8;
+  font-size: 20px;
+}

@@ -1,0 +1,165 @@
+header {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+header .logo {
+  text-decoration: none;
+}
+
+header .logo {
+  width: 180px !important;
+}
+
+.rounded-circle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: #f0f5ff !important;
+  color: #292929;
+}
+.rounded-circle svg {
+  color: #292929;
+  font-size: 18px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.myAcc {
+  text-align: left !important;
+  color: #000 !important;
+}
+
+.userImag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0858f7;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.userImag .rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.userImag .rounded-circle img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+header button.rounded-circle:hover svg {
+  color: #0858f7 !important;
+}
+
+.myAcc .userInfo {
+  padding-left: 15px;
+}
+
+.myAcc .userInfo h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.myAcc .userInfo p {
+  margin-top: 0px;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.7;
+  text-decoration: none;
+
+  text-transform: lowercase;
+}
+
+#account-menu li {
+  font-size: 15px !important;
+}
+
+#account-menu li svg {
+  font-size: 20px !important;
+}
+
+/* #notifications .Muipaper-elevatio {
+  right: 16% !important;
+  width: 250px !important;
+  left: auto !important;
+} */
+
+#notifications .MuiPaper-elevation {
+  top: 55px !important;
+  left: auto !important;
+  right: 210px !important;
+  width: 400px !important;
+}
+.dropDown_list .head {
+  padding: 10px 0px;
+}
+.dropDown_list .head h5 {
+  font-size: 20px !important;
+  font-weight: 600;
+}
+
+.dropDown_list li.MuiButtonBase-root {
+  background: #ebf6ff !important;
+  color: #000 !important;
+  padding: 10px 15px !important;
+}
+.dropDown_list li.MuiButtonBase-root:hover {
+  background: #e6eaf3 !important;
+}
+.css-eqeipb-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  overflow: none !important;
+}
+.DropdownInfo {
+  padding-left: 15px;
+}
+.DropdownInfo h4 {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: break-spaces;
+  margin-top: 0px;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+
+.DropdownInfo b {
+  font-weight: 600;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+.DropdownInfo p {
+  font-size: 13px;
+  font-weight: 500;
+}
+.text-sky {
+  color: #0858f7 !important;
+}
+
+.dropDown_list .scroll {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.btn-blue {
+  background: #0858f7 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+}
