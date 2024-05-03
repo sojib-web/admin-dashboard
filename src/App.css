@@ -18,9 +18,11 @@ body {
   width: 2px !important;
   height: 2px !important;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #0858f7 !important;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent !important;
 }
@@ -47,6 +49,7 @@ body {
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb {
   background: transparent !important;
 }
-.main .sidebarWrapper:hover.sidebar::-webkit-scrollbar {
+
+.main .sidebarWrapper:hover .sidebar::-webkit-scrollbar {
   background: #0858f7 !important;
 }
