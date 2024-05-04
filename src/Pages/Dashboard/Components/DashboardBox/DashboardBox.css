@@ -1,0 +1,26 @@
+.dashboardBoxWrapper .dashboardBox .col1 h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dashboardBoxWrapper .dashboardBox .col1 span {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.dashboardBoxWrapper .dashboardBox .icon svg {
+    font-size: 40px;
+    opacity: 0.3;
+    color: #ffffff;
+}
+
+.dashboardBoxWrapper .dashboardBox .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0.2));
+}
