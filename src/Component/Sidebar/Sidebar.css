@@ -50,9 +50,9 @@
   margin-right: 10px;
 }
 
-.sidebar ul li button * {
-  color: #5e5d72 !important;
-}
+/* .sidebar ul li button * {
+  color: #5e5d72;
+} */
 
 .sidebar ul li button .icon svg {
   font-size: 20px;
@@ -67,9 +67,10 @@
   height: 25px;
   transition: all 0.3s ease-in-out;
 }
-
+.sidebar ul li button.active span .icon svg {
+  color: #0858f7 !important;
+}
 .sidebar ul li button.active .arrow {
-
   transform: rotate(90deg);
 }
 
@@ -84,11 +85,10 @@
   position: relative;
   transition: all 0.3s ease-in-out;
   height: 0px;
-
 }
 
 .sidebar ul li .submenu::before {
-  content: '';
+  content: "";
   width: 1px;
   height: 95%;
   position: absolute;
@@ -100,7 +100,6 @@
 .sidebar ul li .submenu li {
   width: 100%;
   list-style: none;
-
 }
 
 .sidebar ul li .submenu li a {
@@ -111,8 +110,6 @@
   font-size: 15px;
   font-weight: 500;
   transition: all 0.3s;
-
-
 }
 
 .sidebar ul li .submenu li a:hover {
@@ -137,6 +134,7 @@
 .sidebar ul li .submenuWrapper.colapse {
   height: auto;
   overflow: inherit;
+  opacity: 1;
 }
 
 .sidebar ul li .submenuWrapper.colapse .submenu {
@@ -147,7 +145,6 @@
 .logOutWrapper {
   padding: 0px 25px;
   padding-bottom: 50px;
-
 }
 
 .logOutWrapper .logOutBox {
@@ -165,7 +162,7 @@
 }
 
 .logOutWrapper .logOutBox::before {
-  content: '';
+  content: "";
   width: 80px;
   height: 80px;
   background: #0858f7;
@@ -177,7 +174,7 @@
 }
 
 .logOutWrapper .logOutBox::after {
-  content: '';
+  content: "";
   width: 40px;
   height: 40px;
   background: #0858f7;
