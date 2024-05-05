@@ -1,6 +1,7 @@
 .dashboardBoxWrapper .dashboardBox .col1 h4 {
-    font-size: 20px;
-    font-weight: 600;
+    text-transform: capitalize !important;
+
+    font-weight: bold !important;
 }
 
 .dashboardBoxWrapper .dashboardBox .col1 span {
@@ -24,3 +25,43 @@
     border-radius: 10px;
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0.2));
 }
+
+.dashboardBoxWrapper .dashboardBox .toggleIcon {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+}
+
+
+
+.dashboardBoxWrapper .dashboardBox .bottomEle {
+    position: relative;
+    top: 10px;
+}
+
+.dashboardBoxWrapper .dashboardBox .MuiList-root svg {
+    color: #000 !important;
+    font-size: 18px !important;
+    margin-right: 10px !important;
+}
+
+.IconText svg {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+
+}
+
+.bottomEle .MuiButtonBase-root svg {
+    font-size: larger !important;
+}
+
+/* 
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+
+    top: 330px !important;
+    left: 706px !important;
+} */
