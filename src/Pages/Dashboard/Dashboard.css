@@ -94,3 +94,86 @@
     font-weight: bold;
     color: #403e57;
 }
+
+
+.cardFilters .texts {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: capitalize !important;
+    color: #403e57;
+}
+
+.table .thead-dark th {
+    background-color: #1866ee !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    font-size: 14px;
+}
+
+.table tbody td {
+    font-size: 13px !important;
+    color: #403e57;
+    font-weight: 500;
+}
+
+.table tbody .actions button {
+    min-width: 35px !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    margin: 0px 3px !important;
+
+}
+
+.table tbody .actions button svg {
+    font-size: 30px !important;
+}
+
+.table tbody .actions button.secondary {
+    background: rgb(203, 60, 231, 0.1) !important;
+}
+
+.table tbody .actions button.success {
+    background: rgb(26, 150, 83, 0.1) !important;
+}
+
+.table tbody .actions button.error {
+    background: rgb(241, 17, 51, 0.1) !important;
+}
+
+table.t-aling td {
+    vertical-align: middle !important;
+}
+
+.table td .oldPrice,
+.table td .oldPrice .NewPrice {
+    display: block;
+    width: 100%;
+}
+
+table td .info h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    margin-bottom: 5px;
+
+}
+
+table td .info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 0px !important;
+
+
+}
+
+table.t-aling td .productBox {
+    width: 150px;
+}
+
+table.t-aling td .productBox .info {
+    width: 100%;
+}
