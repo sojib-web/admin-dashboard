@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/bacola-logo.png";
@@ -17,7 +17,8 @@ import { RiAccountPinCircleFill } from "react-icons/ri";
 import { LuLogOut } from "react-icons/lu";
 import { FaShieldHalved } from "react-icons/fa6";
 import Divider from "@mui/material/Divider";
-
+import { Mycontext } from "../../App";
+import MenuIcon from "@mui/icons-material/Menu";
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isOpneNotificationDrop, setisOpneNotificationDrop] = useState(false);
@@ -40,6 +41,7 @@ const Header = () => {
     setisOpneNotificationDrop(false);
   };
 
+  const context = useContext(Mycontext);
   return (
     <>
       <header className="d-flex align-items-center">
@@ -53,8 +55,18 @@ const Header = () => {
             </div>
 
             <div className="col-sm-3 d-flex align-items-center part2 pl-4 ">
-              <Button className="rounded-circle mr-3">
-                <RiMenuFold2Fill />
+              <Button
+                className="rounded-circle mr-3"
+                onClick={() =>
+                  context.setIsToggleSidebar(!context.isToggleSidebar)
+                }
+              >
+                {/* <RiMenuFold2Fill /> */}
+                {context.isToggleSidebar === false ? (
+                  <RiMenuFold2Fill />
+                ) : (
+                  <MenuIcon />
+                )}
               </Button>
               <SearchBox />
             </div>

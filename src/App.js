@@ -4,26 +4,43 @@ import "./App.css";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Header from "./Component/Header/Header";
 import Sidebar from "./Component/Sidebar/Sidebar";
+import { createContext, useState } from "react";
 
+const Mycontext = createContext();
 function App() {
+  const [isToggleSidebar, setIsToggleSidebar] = useState(false);
+  const values = {
+    isToggleSidebar,
+    setIsToggleSidebar,
+  };
+
   return (
     <BrowserRouter>
-      <Header />
+      <Mycontext.Provider value={values}>
+        <Header />
 
-      <div className="main d-flex">
-        <div className="sidebarWrapper">
-          <Sidebar />
-        </div>
+        <div className="main d-flex">
+          <div
+            className={`sidebarWrapper ${
+              isToggleSidebar === true ? "toggle" : ""
+            }`}
+          >
+            <Sidebar />
+          </div>
 
-        <div className="content">
-          <Routes>
-            <Route path="/" exact={true} element={<Dashboard />} />
-            <Route path="/dashboard" exact={true} element={<Dashboard />} />
-          </Routes>
+          <div
+            className={`content ${isToggleSidebar === true ? "toggle" : ""}`}
+          >
+            <Routes>
+              <Route path="/" exact={true} element={<Dashboard />} />
+              <Route path="/dashboard" exact={true} element={<Dashboard />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </Mycontext.Provider>
     </BrowserRouter>
   );
 }
 
 export default App;
+export { Mycontext };

@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import DashboardBox from "./Components/DashboardBox/DashboardBox"
+import DashboardBox from "./Components/DashboardBox/DashboardBox";
 import { FaCircleUser } from "react-icons/fa6";
 import { HiDotsVertical } from "react-icons/hi";
 import { ImCart } from "react-icons/im";
 import { IoBagHandleSharp } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Button from '@mui/material/Button';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Button from "@mui/material/Button";
 import { IoIosTimer } from "react-icons/io";
 import { Chart } from "react-google-charts";
-import Select from '@mui/material/Select';
-import FormControl from '@mui/material/FormControl';
+import Select from "@mui/material/Select";
+import FormControl from "@mui/material/FormControl";
 import { MdRemoveRedEye } from "react-icons/md";
 import { BsPencilFill } from "react-icons/bs";
 import { MdAutoDelete } from "react-icons/md";
-
-import ImgProduct from "../../assets/images/12.jpg"
+import Pagination from "@mui/material/Pagination";
+import ImgProduct from "../../assets/images/cat-4.png";
 export const data = [
   ["Year", "Sales", "Expenses"],
   ["2013", 1000, 400],
@@ -33,11 +33,11 @@ export const options = {
   chartArea: { width: "50%", height: "70%" },
 };
 const Dashboard = () => {
-  const [ShowBy, setShowBy] = useState('');
-  const [ShowByCat, setShowByCat] = useState('');
-  const [ShowByBrand, setShowByBrand] = useState('');
-  const [ShowBySearch, setShowBySearch] = useState('');
-  const [anchorEl1, setAnchorEl1] = useState(null)
+  const [ShowBy, setShowBy] = useState("");
+  const [ShowByCat, setShowByCat] = useState("");
+  const [ShowByBrand, setShowByBrand] = useState("");
+  const [ShowBySearch, setShowBySearch] = useState("");
+  const [anchorEl1, setAnchorEl1] = useState(null);
   const open = Boolean(anchorEl1);
   const handleClick = (event) => {
     setAnchorEl1(event.currentTarget);
@@ -45,7 +45,6 @@ const Dashboard = () => {
   const handleCloses = () => {
     setAnchorEl1(null);
   };
-
 
   const handleChange = (event) => {
     setShowBy(event.target.value);
@@ -67,54 +66,73 @@ const Dashboard = () => {
         <div className="row dashboardBoxWrapperRow">
           <div className="col-md-8">
             <div className="dashboardBoxWrapper d-flex">
-              <DashboardBox color={['#11998e', '#38ef7d']} icon={<FaCircleUser />}
-                grow={true} />
-              <DashboardBox color={['#6a11cb', '#2575fc']} icon={<ImCart />} />
-              <DashboardBox color={['#f7971e', '#ffd200']} icon={<IoBagHandleSharp />} />
-              <DashboardBox color={['#ff6e7f', '#bfe9ff']} icon={<IoStarSharp />} />
+              <DashboardBox
+                color={["#11998e", "#38ef7d"]}
+                icon={<FaCircleUser />}
+                grow={true}
+              />
+              <DashboardBox color={["#6a11cb", "#2575fc"]} icon={<ImCart />} />
+              <DashboardBox
+                color={["#f7971e", "#ffd200"]}
+                icon={<IoBagHandleSharp />}
+              />
+              <DashboardBox
+                color={["#ff6e7f", "#bfe9ff"]}
+                icon={<IoStarSharp />}
+              />
             </div>
           </div>
           <div className="col-md-3 pl-0">
             <div className="box graphBox">
-              <div className='d-flex align-items-center w-100 bottomEle'>
-                <h6 className='text-white mb-0 mt-0'>Total Seles</h6>
-                <div className='ml-auto'>
-                  <Button className='ml-auto toggleIcon' onClick={handleClick}><HiDotsVertical /></Button>
+              <div className="d-flex align-items-center w-100 bottomEle">
+                <h6 className="text-white mb-0 mt-0">Total Seles</h6>
+                <div className="ml-auto">
+                  <Button className="ml-auto toggleIcon" onClick={handleClick}>
+                    <HiDotsVertical />
+                  </Button>
 
                   <Menu
-                    className='dropDownMenus'
+                    className="dropDownMenus"
                     MenuListProps={{
-                      'aria-labelledby': 'long-button',
+                      "aria-labelledby": "long-button",
                     }}
                     anchorEl={anchorEl1}
                     open={open}
                     onClose={handleCloses}
                     PaperProps={{
                       style: {
-
-                        width: '20ch',
+                        width: "20ch",
                       },
                     }}
                   >
-
                     <MenuItem onClick={handleCloses}>
-                      <div className='IconText'>                            <IoIosTimer className='mr-3 Timer' />
-                        <span className='align-items-center'>Last</span></div>
+                      <div className="IconText">
+                        {" "}
+                        <IoIosTimer className="mr-3 Timer" />
+                        <span className="align-items-center">Last</span>
+                      </div>
                     </MenuItem>
                     <MenuItem onClick={handleCloses}>
-                      <div className='IconText'>                            <IoIosTimer className='mr-3 Timer' />
-                        <span className='align-items-center'>Last Day</span></div>
+                      <div className="IconText">
+                        {" "}
+                        <IoIosTimer className="mr-3 Timer" />
+                        <span className="align-items-center">Last Day</span>
+                      </div>
                     </MenuItem>
                     <MenuItem onClick={handleCloses}>
-                      <div className='IconText'>                            <IoIosTimer className='mr-3 Timer' />
-                        <span className='align-items-center'>Last Day</span></div>
+                      <div className="IconText">
+                        {" "}
+                        <IoIosTimer className="mr-3 Timer" />
+                        <span className="align-items-center">Last Day</span>
+                      </div>
                     </MenuItem>
                     <MenuItem onClick={handleCloses}>
-                      <div className='IconText'>                            <IoIosTimer className='mr-3 Timer' />
-                        <span className='align-items-center'>Last Day</span></div>
-
+                      <div className="IconText">
+                        {" "}
+                        <IoIosTimer className="mr-3 Timer" />
+                        <span className="align-items-center">Last Day</span>
+                      </div>
                     </MenuItem>
-
                   </Menu>
                 </div>
               </div>
@@ -143,7 +161,7 @@ const Dashboard = () => {
                   value={ShowBy}
                   onChange={handleChange}
                   displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
+                  inputProps={{ "aria-label": "Without label" }}
                   className="w-100"
                 >
                   <MenuItem value="">
@@ -163,7 +181,7 @@ const Dashboard = () => {
                   value={ShowByCat}
                   onChange={handleChangeCat}
                   displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
+                  inputProps={{ "aria-label": "Without label" }}
                   className="w-100"
                 >
                   <MenuItem value="">
@@ -175,7 +193,6 @@ const Dashboard = () => {
                 </Select>
               </FormControl>
             </div>
-
 
             <div className="col-md-3">
               <h4 className="texts">Brand By </h4>
@@ -184,7 +201,7 @@ const Dashboard = () => {
                   value={ShowByBrand}
                   onChange={handleChangeCatBrand}
                   displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
+                  inputProps={{ "aria-label": "Without label" }}
                   className="w-100"
                 >
                   <MenuItem value="">
@@ -197,7 +214,6 @@ const Dashboard = () => {
               </FormControl>
             </div>
 
-
             <div className="col-md-3">
               <h4 className="texts">Brand By </h4>
               <FormControl size="small" className="w-100">
@@ -205,7 +221,7 @@ const Dashboard = () => {
                   value={ShowBySearch}
                   onChange={handleChangesetShowBySearch}
                   displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
+                  inputProps={{ "aria-label": "Without label" }}
                   className="w-100"
                 >
                   <MenuItem value="">
@@ -217,7 +233,7 @@ const Dashboard = () => {
                 </Select>
               </FormControl>
             </div>
-            <div className="table-responsive mt-3">
+            <div className="table-responsive mt-3 mr-5 ml-5">
               <table className="table table-bordered t-aling">
                 <thead className="thead-dark">
                   <tr>
@@ -231,7 +247,6 @@ const Dashboard = () => {
                     <th>ORDER</th>
                     <th>SELES</th>
                     <th>ACTION</th>
-
                   </tr>
                 </thead>
                 <tbody>
@@ -239,42 +254,557 @@ const Dashboard = () => {
                     <td>#1</td>
                     <td>rhuiort</td>
                     <td>
-                      <div className="d-flex productBox">
-                        <div className="info">
-                          <div className="imgWrapper">
-                            <div className="img w-100">
-                              <img src={ImgProduct} alt="" />
-                            </div>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
                           </div>
-                          <h6>means that your application is trying to import a module</h6>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
 
-                          <p> If you're sure the module name and installation</p>
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
                         </div>
                       </div>
                     </td>
                     <td>womens</td>
                     <td>ricman</td>
-                    <td><del className="oldPrice">$045</del>
-                      <span className="NewPrice text-danger">$045</span></td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
                     <td>35.(23)</td>
                     <td>300</td>
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary"><MdRemoveRedEye /></Button>
-                        <Button className="success" color="success"><BsPencilFill /></Button>
-                        <Button className="error" color="error"><MdAutoDelete /></Button>
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
                       </div>
                     </td>
+                  </tr>
 
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Button className="secondary" color="secondary">
+                          <MdRemoveRedEye />
+                        </Button>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
+                        </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
+              <div className="d-flex tableFooter ">
+                <p>
+                  Showing <b>12</b>of <b>60</b> results
+                </p>
+                <Pagination
+                  count={100}
+                  variant="outlined"
+                  color="secondary"
+                  className="pagination"
+                  showFirstButton
+                  showLastButton
+                />
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
     </>
   );

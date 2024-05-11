@@ -8,6 +8,7 @@
 body {
   font-family: "Open Sans", sans-serif !important;
   background: #ebe9e9;
+  overflow-x: hidden;
 }
 
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
@@ -32,13 +33,21 @@ body {
   flex: 0 0 20%;
   transition: all 0.3s ease-in-out;
 }
-
-.main .content {
-  width: 80%;
-  flex: 0 0 80%;
+.main .sidebarWrapper.toggle {
+  width: 0%;
+  flex: 0 0 0%;
+}
+.main .sidebarWrapper.toggle .sidebar {
+  left: -100%;
+  opacity: 0;
 }
 
-.main .sidebarWrapper .sidebar ul li button.active .icon svg {
+.main .content.toggle {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.main .content .main .sidebarWrapper .sidebar ul li button.active .icon svg {
   color: #0858f7 !important;
 }
 
@@ -53,6 +62,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   padding-bottom: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb {
