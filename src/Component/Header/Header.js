@@ -26,6 +26,8 @@ const Header = () => {
   const openMyAcc = Boolean(anchorEl);
   const openNotification = Boolean(isOpneNotificationDrop);
 
+
+
   const handleOpenAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -54,7 +56,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="col-sm-3 d-flex align-items-center part2 pl-4 ">
+            <div className="col-sm-3 d-flex align-items-center part2 ">
               <Button
                 className="rounded-circle mr-3"
                 onClick={() =>
@@ -324,82 +326,86 @@ const Header = () => {
                 </div>
               </Menu>
 
-              <div className="myAccWrapper">
-                <Button
-                  className="myAcc d-flex align-items-center"
-                  onClick={handleOpenAccDrop}
-                >
-                  <div className="userImag">
-                    <span className="rounded-circle">
-                      <img src={userLogo} alt="" />
-                    </span>
-                  </div>
-                  <div className="userInfo">
-                    <h4>Sojib ALi</h4>
-                    <p className="m-0">@gmailcom</p>
-                  </div>
-                </Button>
+              {
+                context.isLogin !== true ? <Link to={'/login'}><Button className="btn-blue btn-lg btn-round">Sign In</Button></Link> :
+                  <div className="myAccWrapper">
+                    <Button
+                      className="myAcc d-flex align-items-center"
+                      onClick={handleOpenAccDrop}
+                    >
+                      <div className="userImag">
+                        <span className="rounded-circle">
+                          <img src={userLogo} alt="" />
+                        </span>
+                      </div>
+                      <div className="userInfo">
+                        <h4>Sojib ALi</h4>
+                        <p className="m-0">@gmailcom</p>
+                      </div>
+                    </Button>
 
-                <Menu
-                  anchorEl={anchorEl}
-                  id="account-menu"
-                  open={openMyAcc}
-                  onClose={handleCloseAccDrop}
-                  onClick={handleCloseAccDrop}
-                  PaperProps={{
-                    elevation: 0,
-                    sx: {
-                      overflow: "visible",
-                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                      mt: 1.5,
-                      "& .MuiAvatar-root": {
-                        width: 32,
-                        height: 32,
-                        ml: -0.5,
-                        mr: 1,
-                      },
-                      "&::before": {
-                        content: '""',
-                        display: "block",
-                        position: "absolute",
-                        top: 0,
-                        right: 14,
-                        width: 10,
-                        height: 10,
-                        bgcolor: "background.paper",
-                        transform: "translateY(-50%) rotate(45deg)",
-                        zIndex: 0,
-                      },
-                    },
-                  }}
-                  transformOrigin={{ horizontal: "right", vertical: "top" }}
-                  anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-                >
-                  <MenuItem onClick={handleCloseAccDrop}>
-                    <ListItemIcon>
-                      <RiAccountPinCircleFill />
-                    </ListItemIcon>
-                    My account
-                  </MenuItem>
-                  <MenuItem onClick={handleCloseAccDrop}>
-                    <ListItemIcon>
-                      <FaShieldHalved />
-                    </ListItemIcon>
-                    Reset Password
-                  </MenuItem>
+                    <Menu
+                      anchorEl={anchorEl}
+                      id="account-menu"
+                      open={openMyAcc}
+                      onClose={handleCloseAccDrop}
+                      onClick={handleCloseAccDrop}
+                      PaperProps={{
+                        elevation: 0,
+                        sx: {
+                          overflow: "visible",
+                          filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                          mt: 1.5,
+                          "& .MuiAvatar-root": {
+                            width: 32,
+                            height: 32,
+                            ml: -0.5,
+                            mr: 1,
+                          },
+                          "&::before": {
+                            content: '""',
+                            display: "block",
+                            position: "absolute",
+                            top: 0,
+                            right: 14,
+                            width: 10,
+                            height: 10,
+                            bgcolor: "background.paper",
+                            transform: "translateY(-50%) rotate(45deg)",
+                            zIndex: 0,
+                          },
+                        },
+                      }}
+                      transformOrigin={{ horizontal: "right", vertical: "top" }}
+                      anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+                    >
+                      <MenuItem onClick={handleCloseAccDrop}>
+                        <ListItemIcon>
+                          <RiAccountPinCircleFill />
+                        </ListItemIcon>
+                        My account
+                      </MenuItem>
+                      <MenuItem onClick={handleCloseAccDrop}>
+                        <ListItemIcon>
+                          <FaShieldHalved />
+                        </ListItemIcon>
+                        Reset Password
+                      </MenuItem>
 
-                  <MenuItem onClick={handleCloseAccDrop}>
-                    <ListItemIcon>
-                      <LuLogOut />
-                    </ListItemIcon>
-                    Logout
-                  </MenuItem>
-                </Menu>
-              </div>
+                      <MenuItem onClick={handleCloseAccDrop}>
+                        <ListItemIcon>
+                          <LuLogOut />
+                        </ListItemIcon>
+                        Logout
+                      </MenuItem>
+                    </Menu>
+                  </div>
+              }
+
             </div>
           </div>
         </div>
-      </header>
+      </header >
     </>
   );
 };

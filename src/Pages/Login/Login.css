@@ -1,0 +1,19 @@
+.loginSection {
+    width: 100%;
+    height: 100vh;
+    padding: 35px 25px;
+    background: #fff;
+    position: relative;
+
+}
+
+.loginBanner {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    pointer-events: none;
+}

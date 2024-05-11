@@ -33,10 +33,12 @@ body {
   flex: 0 0 20%;
   transition: all 0.3s ease-in-out;
 }
+
 .main .sidebarWrapper.toggle {
   width: 0%;
   flex: 0 0 0%;
 }
+
 .main .sidebarWrapper.toggle .sidebar {
   left: -100%;
   opacity: 0;
@@ -71,4 +73,10 @@ body {
 
 .main .sidebarWrapper:hover .sidebar::-webkit-scrollbar {
   background: #0858f7 !important;
+}
+
+.full {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
 }

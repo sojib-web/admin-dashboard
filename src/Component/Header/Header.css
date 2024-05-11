@@ -14,6 +14,10 @@ header .logo {
   text-decoration: none;
 }
 
+header .part2 {
+  padding-left: 50px;
+}
+
 header .logo {
   width: 180px !important;
 }
@@ -25,6 +29,7 @@ header .logo {
   background: #f0f5ff !important;
   color: #292929;
 }
+
 .rounded-circle svg {
   color: #292929;
   font-size: 18px !important;
@@ -58,11 +63,13 @@ header .logo {
   cursor: pointer;
   position: relative;
 }
+
 .userImag .rounded-circle img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
 header button.rounded-circle:hover svg {
   color: #0858f7 !important;
 }
@@ -107,9 +114,11 @@ header button.rounded-circle:hover svg {
   right: 210px !important;
   width: 400px !important;
 }
+
 .dropDown_list .head {
   padding: 10px 0px;
 }
+
 .dropDown_list .head h5 {
   font-size: 20px !important;
   font-weight: 600;
@@ -120,15 +129,19 @@ header button.rounded-circle:hover svg {
   color: #000 !important;
   padding: 10px 15px !important;
 }
+
 .dropDown_list li.MuiButtonBase-root:hover {
   background: #e6eaf3 !important;
 }
+
 .css-eqeipb-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
   overflow: none !important;
 }
+
 .DropdownInfo {
   padding-left: 15px;
 }
+
 .DropdownInfo h4 {
   font-size: 15px;
   font-weight: 500;
@@ -143,10 +156,12 @@ header button.rounded-circle:hover svg {
   margin-right: 5px;
   margin-bottom: 0px;
 }
+
 .DropdownInfo p {
   font-size: 13px;
   font-weight: 500;
 }
+
 .text-sky {
   color: #0858f7 !important;
 }
@@ -164,4 +179,12 @@ header button.rounded-circle:hover svg {
   text-transform: capitalize !important;
   color: #fff !important;
   border-radius: 5px !important;
+}
+
+.btn-lg {
+  padding: 7px 25px !important;
+}
+
+.btn-round {
+  border-radius: 100px !important;
 }
