@@ -64,7 +64,7 @@ const Dashboard = () => {
     <>
       <div className="right-content w-100">
         <div className="row dashboardBoxWrapperRow">
-          <div className="col-md-8">
+          <div className="col-md-9">
             <div className="dashboardBoxWrapper d-flex">
               <DashboardBox
                 color={["#11998e", "#38ef7d"]}
