@@ -1,19 +1,131 @@
 .loginSection {
-    width: 100%;
-    height: 100vh;
-    padding: 35px 25px;
-    background: #fff;
-    position: relative;
-
+  width: 100%;
+  height: 100vh;
+  padding: 35px 25px;
+  background: #fff;
+  position: relative;
 }
 
+.loginSection .loginBox {
+  width: 320px;
+  height: auto;
+
+  margin: auto;
+}
+.loginSection .loginBox .wrapper {
+  background: #f0f0f0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 100;
+  padding: 35px;
+}
+
+.loginSection .loginBox .wrapper .form-group {
+  margin-bottom: 22px;
+}
+
+.loginSection .loginBox .wrapper .form-control {
+  background: #fff !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  font-size: 15px;
+  font-weight: 600;
+  height: 45px;
+  padding-left: 40px;
+}
+
+.loginSection .loginBox .wrapper .form-control:focus {
+  border: 1px solid #0858f7 !important;
+}
+
+.loginSection .loginBox .wrapper .form-group.focus .icon svg {
+  color: #0858f7 !important;
+}
+
+.link-color {
+  color: #6c757d !important;
+  text-decoration: none !important;
+}
+.link-color:hover {
+  color: #0858f7 !important;
+  text-decoration: none !important;
+}
+.loginSection .loginBox .wrapper .form-group .icon {
+  position: absolute !important;
+  top: 11px;
+  left: 15px;
+  z-index: 100;
+}
 .loginBanner {
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 99;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.toggleShowPassword {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.toggleShowPassword svg {
+  font-size: 20px;
+}
+
+.textSize {
+  font-size: 20px !important;
+}
+
+.link {
+  color: #6c757d;
+  font-weight: 600;
+}
+.link:hover {
+  color: #0858f7 !important;
+  text-decoration: none !important;
+}
+
+.loginSection .loginBox .wrapper .link {
+  font-size: 14px;
+}
+
+.loginSection .loginBox .wrapper .or span.line {
+  display: block;
+  width: 35%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.loginSection .loginBox .wrapper .or span.txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.loginWithGoogle {
+  text-transform: capitalize !important;
+  font-weight: bold !important;
+}
+.IconGoogle {
+  font-size: 20px !important;
+  text-align: center;
+}
+
+.footer span {
+  color: #6c757d;
+  font-size: 16px;
 }

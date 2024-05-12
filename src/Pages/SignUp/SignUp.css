@@ -1,0 +1,42 @@
+.SignSection {
+  background: #f1f1f1 !important;
+  padding: 35px 0px;
+  height: auto;
+}
+
+.SignSection .loginBox {
+  background: #e7e6e6 !important;
+  position: relative;
+  z-index: 100;
+  width: 80% !important;
+  padding: 25px 5px !important;
+  border-radius: 20px;
+}
+.SignSection .loginBox .wrapper {
+  border: 0px !important;
+  background: transparent !important;
+  padding-top: 10px !important;
+}
+
+span {
+  color: #6c757d;
+}
+
+.SignSection .part1 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.SignSection .part1 h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.SignSection .part1 p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-big svg {
+  font-size: 25px !important;
+}

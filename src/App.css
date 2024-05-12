@@ -11,6 +11,15 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #403e57;
+}
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
   font-family: "Open Sans", sans-serif !important;
 }

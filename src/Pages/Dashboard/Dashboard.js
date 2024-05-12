@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Dashboard.css";
 import DashboardBox from "./Components/DashboardBox/DashboardBox";
 import { FaCircleUser } from "react-icons/fa6";
@@ -18,6 +18,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { MdAutoDelete } from "react-icons/md";
 import Pagination from "@mui/material/Pagination";
 import ImgProduct from "../../assets/images/cat-4.png";
+import { Mycontext } from "../../App";
 export const data = [
   ["Year", "Sales", "Expenses"],
   ["2013", 1000, 400],
@@ -42,6 +43,14 @@ const Dashboard = () => {
   const handleClick = (event) => {
     setAnchorEl1(event.currentTarget);
   };
+
+  const context = useContext(Mycontext);
+
+  useEffect(() => {
+    context.setIsHideSiderbarAndHeader(false);
+    window.scrollTo(0, 0);
+  });
+
   const handleCloses = () => {
     setAnchorEl1(null);
   };
