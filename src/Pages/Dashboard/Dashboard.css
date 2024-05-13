@@ -46,11 +46,12 @@ body.dark .css-1v2lvtn-MuiPaginationItem-root {
   color: rgba(255, 255, 255, 0.87);
   font-size: 20px;
 }
+
 .right-content {
   padding: 90px 30px;
 }
 
-.right-content .content {
+.content {
   width: 80% !important;
   flex: 0 0 80% !important;
 }
@@ -236,6 +237,7 @@ table.t-aling td .productBox .info {
   font-weight: 500;
   margin-bottom: 0px;
 }
+
 .tableFooter .pagination {
   margin-left: auto !important;
 }

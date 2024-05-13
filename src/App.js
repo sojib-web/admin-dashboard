@@ -7,7 +7,8 @@ import Sidebar from "./Component/Sidebar/Sidebar";
 import { createContext, useEffect, useState } from "react";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
-import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+
+import ProductsDetailsPage from "./Pages/ProductsDetailspage/ProductsDetailsPage";
 
 const Mycontext = createContext();
 function App() {
@@ -52,18 +53,16 @@ function App() {
         <div className="main d-flex">
           {isHideSiderbarAndHeader !== true && (
             <div
-              className={`sidebarWrapper ${
-                isToggleSidebar === true ? "toggle" : ""
-              }`}
+              className={`sidebarWrapper ${isToggleSidebar === true ? "toggle" : ''
+                }`}
             >
               <Sidebar />
             </div>
           )}
 
           <div
-            className={`content ${isHideSiderbarAndHeader === true && "full"} ${
-              isToggleSidebar === true ? "toggle" : ""
-            }`}
+            className={`content ${isHideSiderbarAndHeader === true && "full"} ${isToggleSidebar === true ? "toggle" : ""
+              }`}
           >
             <Routes>
               <Route path="/" exact={true} element={<Dashboard />} />
@@ -73,7 +72,7 @@ function App() {
               <Route
                 path="/product/details"
                 exact={true}
-                element={<ProductDetails />}
+                element={<ProductsDetailsPage />}
               />
             </Routes>
           </div>
