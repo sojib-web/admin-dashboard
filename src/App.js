@@ -7,11 +7,12 @@ import Sidebar from "./Component/Sidebar/Sidebar";
 import { createContext, useEffect, useState } from "react";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 const Mycontext = createContext();
 function App() {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [isHideSiderbarAndHeader, setIsHideSiderbarAndHeader] = useState(false);
 
   const [themeMode, setThemeMode] = useState(true);
@@ -69,6 +70,11 @@ function App() {
               <Route path="/dashboard" exact={true} element={<Dashboard />} />
               <Route path="/login" exact={true} element={<Login />} />
               <Route path="/signUp" exact={true} element={<SignUp />} />
+              <Route
+                path="/product/details"
+                exact={true}
+                element={<ProductDetails />}
+              />
             </Routes>
           </div>
         </div>

@@ -1,3 +1,39 @@
+body.dark .sidebar {
+  background-color: #112143 !important;
+}
+
+body.dark .sidebar ul li button {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark .sidebar ul li button .arrow svg {
+  color: #1981dd !important;
+}
+
+body.dark .sidebar ul li button:hover {
+  background: rgba(109, 143, 244, 0.8) !important;
+}
+body.dark .sidebar ul li button.active {
+  color: #112143 !important;
+}
+
+body.dark span {
+  color: #1981dd;
+}
+
+body.dark .sidebar ul li .submenu li a:hover {
+  color: rgba(109, 143, 244, 0.8) !important;
+  text-decoration: none !important;
+}
+
+body.dark .sidebar ul li button.active .arrow svg {
+  color: black;
+}
+
+body.dark .logOutWrapper .logOutBox {
+  background: transparent;
+  background-image: linear-gradient(#45596b, #2e3b58);
+}
+
 .sidebar {
   width: 20%;
   height: 100vh;
@@ -72,7 +108,7 @@
   color: #0858f7 !important;
 }
 
-.sidebar ul li button.active .arrow {
+.sidebar ul li button.active .arrow svg {
   transform: rotate(90deg);
 }
 

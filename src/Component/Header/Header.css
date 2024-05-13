@@ -34,6 +34,14 @@ body.dark .MuiPaper-elevation li *,
 body.dark .MuiPaper-elevation li {
   color: rgba(255, 255, 255, 0.8) !important;
 }
+
+body.dark .css-eqeipb-MuiPaper-root-MuiPopover-paper-MuiMenu-paper::before {
+  background-color: #12254e !important;
+}
+
+body.dark .dropDown_list li.MuiButtonBase-root {
+  background-color: #12254e !important;
+}
 header {
   width: 100%;
   height: 70px;

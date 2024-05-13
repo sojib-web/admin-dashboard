@@ -19,6 +19,7 @@ import { MdAutoDelete } from "react-icons/md";
 import Pagination from "@mui/material/Pagination";
 import ImgProduct from "../../assets/images/cat-4.png";
 import { Mycontext } from "../../App";
+import { Link } from "react-router-dom";
 export const data = [
   ["Year", "Sales", "Expenses"],
   ["2013", 1000, 400],
@@ -295,9 +296,12 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
+
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -344,9 +348,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -393,9 +399,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -442,9 +450,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -491,9 +501,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -540,9 +552,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -589,9 +603,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -638,9 +654,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -686,58 +704,11 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
-                        <Button className="success" color="success">
-                          <BsPencilFill />
-                        </Button>
-                        <Button className="error" color="error">
-                          <MdAutoDelete />
-                        </Button>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>#1</td>
-                    <td>rhuiort</td>
-                    <td>
-                      <div className="d-flex productBox align-items-center">
-                        <div className="imgWrapper">
-                          <div className="img ">
-                            <img src={ImgProduct} alt="" className="w-100" />
-                          </div>
-                        </div>
-                        <div className="info pl-3">
-                          <h6>
-                            means that your application is trying to import a
-                            module
-                          </h6>
-
-                          <p>
-                            {" "}
-                            If you're sure the module name and installation
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womens</td>
-                    <td>ricman</td>
-                    <td>
-                      <div style={{ width: "60px" }}>
-                        <del className="oldPrice">$045</del>
-                        <span className="NewPrice text-danger">$045</span>
-                      </div>
-                    </td>
-                    <td>35.(23)</td>
-                    <td>300</td>
-                    <td>$45k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
-                        </Button>
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
@@ -784,9 +755,62 @@ const Dashboard = () => {
                     <td>$45k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                        <Button className="secondary" color="secondary">
-                          <MdRemoveRedEye />
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
+                        <Button className="success" color="success">
+                          <BsPencilFill />
                         </Button>
+                        <Button className="error" color="error">
+                          <MdAutoDelete />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#1</td>
+                    <td>rhuiort</td>
+                    <td>
+                      <div className="d-flex productBox align-items-center">
+                        <div className="imgWrapper">
+                          <div className="img ">
+                            <img src={ImgProduct} alt="" className="w-100" />
+                          </div>
+                        </div>
+                        <div className="info pl-3">
+                          <h6>
+                            means that your application is trying to import a
+                            module
+                          </h6>
+
+                          <p>
+                            {" "}
+                            If you're sure the module name and installation
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>womens</td>
+                    <td>ricman</td>
+                    <td>
+                      <div style={{ width: "60px" }}>
+                        <del className="oldPrice">$045</del>
+                        <span className="NewPrice text-danger">$045</span>
+                      </div>
+                    </td>
+                    <td>35.(23)</td>
+                    <td>300</td>
+                    <td>$45k</td>
+                    <td>
+                      <div className="actions d-flex align-items-center">
+                        <Link to={`/product/details`}>
+                          <Button className="secondary" color="secondary">
+                            <MdRemoveRedEye />
+                          </Button>
+                        </Link>
                         <Button className="success" color="success">
                           <BsPencilFill />
                         </Button>
