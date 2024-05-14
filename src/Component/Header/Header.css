@@ -96,7 +96,10 @@ header .logo {
   padding: 2px;
   border-radius: 100%;
 }
-
+.userImag.lg {
+  width: 60px !important;
+  height: 60px !important;
+}
 .userImag .rounded-circle {
   display: flex;
   align-items: center;

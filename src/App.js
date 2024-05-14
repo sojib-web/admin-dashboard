@@ -9,11 +9,12 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
 
 import ProductsDetailsPage from "./Pages/ProductsDetailspage/ProductsDetailsPage";
+import ProductUpload from "./Pages/ProductUpLoad/ProductUpload";
 
 const Mycontext = createContext();
 function App() {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [isHideSiderbarAndHeader, setIsHideSiderbarAndHeader] = useState(false);
 
   const [themeMode, setThemeMode] = useState(true);
@@ -53,16 +54,18 @@ function App() {
         <div className="main d-flex">
           {isHideSiderbarAndHeader !== true && (
             <div
-              className={`sidebarWrapper ${isToggleSidebar === true ? "toggle" : ''
-                }`}
+              className={`sidebarWrapper ${
+                isToggleSidebar === true ? "toggle" : ""
+              }`}
             >
               <Sidebar />
             </div>
           )}
 
           <div
-            className={`content ${isHideSiderbarAndHeader === true && "full"} ${isToggleSidebar === true ? "toggle" : ""
-              }`}
+            className={`content ${isHideSiderbarAndHeader === true && "full"} ${
+              isToggleSidebar === true ? "toggle" : ""
+            }`}
           >
             <Routes>
               <Route path="/" exact={true} element={<Dashboard />} />
@@ -73,6 +76,11 @@ function App() {
                 path="/product/details"
                 exact={true}
                 element={<ProductsDetailsPage />}
+              />
+              <Route
+                path="/product/upload"
+                exact={true}
+                element={<ProductUpload />}
               />
             </Routes>
           </div>

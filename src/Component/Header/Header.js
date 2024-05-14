@@ -19,6 +19,7 @@ import { FaShieldHalved } from "react-icons/fa6";
 import Divider from "@mui/material/Divider";
 import { Mycontext } from "../../App";
 import MenuIcon from "@mui/icons-material/Menu";
+import UserAvatar from "../userAvatarCom/UserAvatar";
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isOpneNotificationDrop, setisOpneNotificationDrop] = useState(false);
@@ -231,11 +232,13 @@ const Header = () => {
                   <MenuItem onClick={handleCloseAccDrop}>
                     <div className="d-flex ">
                       <div>
-                        <div className="userImag">
+                        {/* <div className="userImag">
                           <span className="rounded-circle">
                             <img src={userLogo} alt="" />
                           </span>
-                        </div>
+                        </div> */}
+
+                        <UserAvatar img={`userLogo`} />
                       </div>
                       <div className="DropdownInfo">
                         <h4>
